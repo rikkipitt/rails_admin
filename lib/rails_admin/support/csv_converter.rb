@@ -57,11 +57,11 @@ module RailsAdmin
       csv_string = CSVClass.generate(options[:generator] ? options[:generator].symbolize_keys.delete_if {|key, value| value.blank? } : {}) do |csv|
         unless options[:skip_header]
           csv << @fields.map do |field|
-            output(::I18n.t('admin.export.csv.header_for_root_methods', :name => field.label, :model => @abstract_model.pretty_name))
+            output(::I18n.t('admin.export.csv.header_for_root_methods', :name => field.name, :model => @abstract_model.pretty_name))
           end +
           @associations.map do |association_name, option_hash|
             option_hash[:fields].map do |field|
-              output(::I18n.t('admin.export.csv.header_for_association_methods', :name => field.label, :association => option_hash[:association].label))
+              output(::I18n.t('admin.export.csv.header_for_association_methods', :name => field.name, :association => option_hash[:association].name))
             end
           end.flatten
         end
