@@ -138,7 +138,7 @@ en:
       click_to_reverse_selection: 'Click to reverse selection'
       csv:
         header_for_root_methods: "%{name}" # 'model' is available
-        header_for_association_methods: "%{name} [%{association}]"
+        header_for_association_methods: "%{name}[%{association}]"
         encoding_to: "Encode to"
         encoding_to_help: "Choose output encoding. Leave empty to let current input encoding untouched: (%{name})"
         skip_header: "No header"
