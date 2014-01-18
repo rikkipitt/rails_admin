@@ -114,7 +114,7 @@ module RailsAdmin
 
         # output for printing in export view (developers beware: no bindings[:view] and no data!)
         register_instance_option :export_value do
-          pretty_value
+          formatted_value.presence || ''
         end
 
 
